@@ -1,33 +1,67 @@
 .icon {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .icon.cursor {
-  background: transparent url(../assets/icons/cursor.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/cursor.svg);
+  mask: url(../assets/icons/cursor.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .icon.ellipse {
-  background: transparent url(../assets/icons/ellipse.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/ellipse.svg);
+  mask: url(../assets/icons/ellipse.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 22px 22px;
+  mask-size: 22px 22px;
 }
 
 .icon.pencil {
-  background: transparent url(../assets/icons/pencil.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-size: 20px 20px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/pencil.svg);
+  mask: url(../assets/icons/pencil.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .icon.rectangle {
-  background: transparent url(../assets/icons/rectangle.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-size: 20px 20px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/rectangle.svg);
+  mask: url(../assets/icons/rectangle.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 
 .icon.undo {
-  background: transparent url(../assets/icons/undo.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-size: 20px 20px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/undo.svg);
+  mask: url(../assets/icons/undo.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }
 .icon.redo {
-  background: transparent url(../assets/icons/redo.svg) no-repeat center center;
-  background-size: 16px 16px;
+  background-size: 20px 20px;
+  background-color: #212121;
+  -webkit-mask: url(../assets/icons/redo.svg);
+  mask: url(../assets/icons/redo.svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  mask-size: cover;
 }

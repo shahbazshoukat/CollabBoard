@@ -1,22 +1,25 @@
 .toolsContainer {
   position: absolute;
-  bottom: 24px;
   right: 0;
-  left: 0;
+  top: calc(50% - 110px);
+  left: 24px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   pointer-events: none;
+  width: fit-content;
+  height: fit-content;
 }
 
 .toolsPanel {
   box-shadow: var(--shadow-popup);
-  border-radius: 12px;
+  border-radius: 6px;
   background-color: var(--color-surface-panel);
   display: flex;
   align-items: center;
   justify-content: center;
   pointer-events: all;
+  flex-direction: column;
 }
 
 .toolsPanelSection {
@@ -24,6 +27,8 @@
   align-items: center;
   justify-content: center;
   padding: 12px;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .separator {

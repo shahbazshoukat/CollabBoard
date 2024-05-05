@@ -1,6 +1,6 @@
 .button {
-  min-width: 28px;
-  min-height: 28px;
+  min-width: 30px;
+  min-height: 30px;
   border-radius: 6px;
   color: var(--color-foreground-200);
   display: flex;
@@ -10,7 +10,7 @@
 
 .button:not(:disabled):hover,
 .button:not(:disabled):focus {
-  color: var(--color-foreground-400);
+  background-color: var(--color-surface-subtle);
 }
 
 .button:not(:disabled):active {
@@ -23,8 +23,11 @@
 }
 
 .button_active {
-  color: var(--color-primary);
   background-color: var(--color-surface-subtle);
+}
+
+.button_active span {
+  background-color: var(--color-primary) !important;
 }
 
 .button_active:not(:disabled):hover,
