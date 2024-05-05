@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import styles from "./useDisableScrollBounce.module.css";
+import { useEffect } from 'react';
+import styles from './useDisableScrollBounce.module.css';
 
 export default function useDisableScrollBounce() {
   useEffect(() => {

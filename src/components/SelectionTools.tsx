@@ -1,11 +1,11 @@
-import { memo } from "react";
-import ColorPicker from "./ColorPicker";
-import IconButton from "./common/IconButton";
-import { Camera, Color } from "@types";
-import styles from "./SelectionTools.module.css";
-import useDeleteLayers from "../hooks/useDeleteLayers";
-import useSelectionBounds from "../hooks/useSelectionBounds";
-import { useSelf, useMutation } from "@liveblocks.config";
+import { memo } from 'react';
+import ColorPicker from './ColorPicker';
+import IconButton from './common/IconButton';
+import { Camera, Color } from '@types';
+import styles from './SelectionTools.module.css';
+import useDeleteLayers from '../hooks/useDeleteLayers';
+import useSelectionBounds from '../hooks/useSelectionBounds';
+import { useSelf, useMutation } from '@liveblocks.config';
 
 type SelectionToolsProps = {
   isAnimated: boolean;
@@ -13,9 +13,7 @@ type SelectionToolsProps = {
   setLastUsedColor: (color: Color) => void;
 };
 
-function SelectionTools(
-  { isAnimated, camera, setLastUsedColor }: SelectionToolsProps
-) {
+function SelectionTools({ isAnimated, camera, setLastUsedColor }: SelectionToolsProps) {
   const selection = useSelf((me) => me.presence.selection);
 
   /**
@@ -23,7 +21,7 @@ function SelectionTools(
    */
   const moveToFront = useMutation(
     ({ storage }) => {
-      const liveLayerIds = storage.get("layerIds");
+      const liveLayerIds = storage.get('layerIds');
       const indices: number[] = [];
 
       const arr = liveLayerIds.toArray();
@@ -35,10 +33,7 @@ function SelectionTools(
       }
 
       for (let i = indices.length - 1; i >= 0; i--) {
-        liveLayerIds.move(
-          indices[i],
-          arr.length - 1 - (indices.length - 1 - i)
-        );
+        liveLayerIds.move(indices[i], arr.length - 1 - (indices.length - 1 - i));
       }
     },
     [selection]
@@ -49,7 +44,7 @@ function SelectionTools(
    */
   const moveToBack = useMutation(
     ({ storage }) => {
-      const liveLayerIds = storage.get("layerIds");
+      const liveLayerIds = storage.get('layerIds');
       const indices: number[] = [];
 
       const arr = liveLayerIds.toArray();
@@ -72,10 +67,10 @@ function SelectionTools(
    */
   const setFill = useMutation(
     ({ storage }, fill: Color) => {
-      const liveLayers = storage.get("layers");
+      const liveLayers = storage.get('layers');
       setLastUsedColor(fill);
       selection.forEach((id) => {
-        liveLayers.get(id)?.set("fill", fill);
+        liveLayers.get(id)?.set('fill', fill);
       });
     },
     [selection, setLastUsedColor]
@@ -94,14 +89,17 @@ function SelectionTools(
     <div
       className={styles.selection_inspector}
       style={{
-        transform: `translate(calc(${x}px - 50%), calc(${y - 16}px - 100%))`,
-      }}
-    >
+        transform: `translate(calc(${x}px - 50%), calc(${y - 16}px - 100%))`
+      }}>
       <ColorPicker onChange={setFill} />
 
       <div>
         <IconButton onClick={moveToFront}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -111,7 +109,11 @@ function SelectionTools(
           </svg>
         </IconButton>
         <IconButton onClick={moveToBack}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none">
             <path
               fillRule="evenodd"
               clipRule="evenodd"
@@ -123,7 +125,11 @@ function SelectionTools(
       </div>
       <div className={styles.selection_inspector_delete}>
         <IconButton onClick={deleteLayers}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none">
             <path
               d="M7.5 9H16.5V18C16.5 18.8284 15.8284 19.5 15 19.5H9C8.17157 19.5 7.5 18.8284 7.5 18V9Z"
               fill="currentColor"

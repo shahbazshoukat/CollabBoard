@@ -1,5 +1,5 @@
-import { RectangleLayer } from "@types";
-import { colorToCss } from "@utils/utils";
+import { RectangleLayer } from '@types';
+import { colorToCss } from '@utils/utils';
 
 type Props = {
   id: string;
@@ -8,24 +8,22 @@ type Props = {
   selectionColor?: string;
 };
 
-export default function Rectangle(
-  { layer, onPointerDown, id, selectionColor }: Props
-) {
+export default function Rectangle({ layer, onPointerDown, id, selectionColor }: Props) {
   const { x, y, width, height, fill } = layer;
 
   return (
     <rect
       onPointerDown={(e) => onPointerDown(e, id)}
       style={{
-        transform: `translate(${x}px, ${y}px)`,
+        transform: `translate(${x}px, ${y}px)`
       }}
       x={0}
       y={0}
       width={width}
       height={height}
-      fill={fill ? colorToCss(fill) : "#CCC"}
+      fill={fill ? colorToCss(fill) : '#CCC'}
       strokeWidth={1}
-      stroke={selectionColor || "transparent"}
+      stroke={selectionColor || 'transparent'}
     />
   );
 }

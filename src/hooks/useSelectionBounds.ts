@@ -1,6 +1,6 @@
-import { useStorage, useSelf } from "@liveblocks.config";
-import { Layer, XYWH } from "@types";
-import { shallow } from "@liveblocks/react";
+import { useStorage, useSelf } from '@liveblocks.config';
+import { Layer, XYWH } from '@types';
+import { shallow } from '@liveblocks/react';
 
 function boundingBox(layers: Layer[]): XYWH | null {
   const first = layers[0];
@@ -33,16 +33,14 @@ function boundingBox(layers: Layer[]): XYWH | null {
     x: left,
     y: top,
     width: right - left,
-    height: bottom - top,
+    height: bottom - top
   };
 }
 
 export default function useSelectionBounds() {
   const selection = useSelf((me) => me.presence.selection);
   return useStorage((root) => {
-    const selectedLayers = selection
-      .map((layerId) => root.layers.get(layerId)!)
-      .filter(Boolean);
+    const selectedLayers = selection.map((layerId) => root.layers.get(layerId)!).filter(Boolean);
     return boundingBox(selectedLayers);
   }, shallow);
 }

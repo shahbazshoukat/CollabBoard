@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pretty": "cd src; prettier --write \"./**/*.{css,scss,ts,tsx,js,jsx,json}\" --ignore-path ../.prettierignore"
   },
   "dependencies": {
     "@liveblocks/client": "^1.12.0",
@@ -14,6 +15,7 @@
     "@liveblocks/react": "^1.12.0",
     "next": "14.2.3",
     "perfect-freehand": "^1.2.2",
+    "prettier": "^3.2.5",
     "react": "^18",
     "react-dom": "^18"
   },

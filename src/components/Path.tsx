@@ -1,5 +1,5 @@
-import { getSvgPathFromStroke } from "@utils/utils";
-import getStroke from "perfect-freehand";
+import { getSvgPathFromStroke } from '@utils/utils';
+import getStroke from 'perfect-freehand';
 
 type Props = {
   x: number;
@@ -10,9 +10,7 @@ type Props = {
   stroke?: string;
 };
 
-export default function Path(
-  { x, y, onPointerDown, stroke, fill, points }: Props
-) {
+export default function Path({ x, y, onPointerDown, stroke, fill, points }: Props) {
   return (
     <path
       onPointerDown={onPointerDown}
@@ -21,11 +19,11 @@ export default function Path(
           size: 16,
           thinning: 0.5,
           smoothing: 0.5,
-          streamline: 0.5,
+          streamline: 0.5
         })
       )}
       style={{
-        transform: `translate(${x}px, ${y}px)`,
+        transform: `translate(${x}px, ${y}px)`
       }}
       x={0}
       y={0}

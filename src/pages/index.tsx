@@ -1,5 +1,5 @@
-import React from "react";
-import Whiteboard from "@components/Whiteboard/Whiteboard";
+import React from 'react';
+import Whiteboard from '@components/Whiteboard/Whiteboard';
 
 export default function Home() {
   return (
@@ -11,11 +11,7 @@ export default function Home() {
 
 export async function getStaticProps() {
   const API_KEY = process.env.LIVEBLOCKS_SECRET_KEY;
-  const API_KEY_WARNING = process.env.CODESANDBOX_SSE
-    ? `Add your secret key from https://liveblocks.io/dashboard/apikeys as the \`LIVEBLOCKS_SECRET_KEY\` secret in CodeSandbox.\n` +
-      `Learn more: https://github.com/liveblocks/liveblocks/tree/main/examples/nextjs-whiteboard#codesandbox.`
-    : `Create an \`.env.local\` file and add your secret key from https://liveblocks.io/dashboard/apikeys as the \`LIVEBLOCKS_SECRET_KEY\` environment variable.\n` +
-      `Learn more: https://github.com/liveblocks/liveblocks/tree/main/examples/nextjs-whiteboard#getting-started.`;
+  const API_KEY_WARNING = process.env.CODESANDBOX_SSE ? `Add your secret key from https://liveblocks.io/dashboard/apikeys as the \`LIVEBLOCKS_SECRET_KEY\` secret in CodeSandbox.\n` + `Learn more: https://github.com/liveblocks/liveblocks/tree/main/examples/nextjs-whiteboard#codesandbox.` : `Create an \`.env.local\` file and add your secret key from https://liveblocks.io/dashboard/apikeys as the \`LIVEBLOCKS_SECRET_KEY\` environment variable.\n` + `Learn more: https://github.com/liveblocks/liveblocks/tree/main/examples/nextjs-whiteboard#getting-started.`;
 
   if (!API_KEY) {
     console.warn(API_KEY_WARNING);

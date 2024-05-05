@@ -11,8 +11,7 @@
   --color-foreground-100: #999;
   --color-primary: #0044ff;
   --color-white: #fff;
-  --shadow-popup: 0px 2px 4px rgba(0, 0, 0, 0.1),
-  0px 0px 0px 1px rgba(0, 0, 0, 0.05);
+  --shadow-popup: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
 }
 
 .canvas {

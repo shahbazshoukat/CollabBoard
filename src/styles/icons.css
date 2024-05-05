@@ -1,33 +1,33 @@
 .icon {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 .icon.cursor {
-    background: transparent url(../assets/icons/cursor.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/cursor.svg) no-repeat center center;
+  background-size: 16px 16px;
 }
 
 .icon.ellipse {
-    background: transparent url(../assets/icons/ellipse.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/ellipse.svg) no-repeat center center;
+  background-size: 16px 16px;
 }
 
 .icon.pencil {
-    background: transparent url(../assets/icons/pencil.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/pencil.svg) no-repeat center center;
+  background-size: 16px 16px;
 }
 
 .icon.rectangle {
-    background: transparent url(../assets/icons/rectangle.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/rectangle.svg) no-repeat center center;
+  background-size: 16px 16px;
 }
 
 .icon.undo {
-    background: transparent url(../assets/icons/undo.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/undo.svg) no-repeat center center;
+  background-size: 16px 16px;
 }
 .icon.redo {
-    background: transparent url(../assets/icons/redo.svg) no-repeat center center;
-    background-size: 16px 16px;
+  background: transparent url(../assets/icons/redo.svg) no-repeat center center;
+  background-size: 16px 16px;
 }

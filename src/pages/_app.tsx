@@ -1,7 +1,7 @@
-import React from "react";
-import { AppProps } from "next/app";
-import Head from "next/head";
-import "../styles/globals.css";
+import React from 'react';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import '../styles/globals.css';
 import '../styles/icons.css';
 
 function App({ Component, pageProps }: AppProps) {
@@ -13,8 +13,14 @@ function App({ Component, pageProps }: AppProps) {
     <React.StrictMode>
       <Head>
         <title>Liveblocks</title>
-        <meta name="robots" content="noindex" />
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta
+          name="robots"
+          content="noindex"
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, user-scalable=no"
+        />
         <link
           href="https://liveblocks.io/favicon-32x32.png"
           rel="icon"
